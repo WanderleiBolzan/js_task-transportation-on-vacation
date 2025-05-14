@@ -12,14 +12,14 @@ function calculateRentalCost(days) {
   }
 
   if (days < 3) {
-    return rentalDay;
+    return rentalDay * days;
   }
 
-  if (days === 3) {
+  if (days >= 3 && days <= 6) {
     return rentalDay * days - 20;
   }
 
-  if (days > 3 && days <= 7) {
+  if (days > 6) {
     return rentalDay * days - 50;
   }
 }
